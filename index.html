@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="bagian_utama">
+        <div class="title">
+          <img src="Sprites/Ball 02.png" alt="" />
+          <h1>WORLD HEAD FOOTBALL</h1>
+        </div>
+          <form action="">
+
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  name="nama"
+                  id="nama"
+                  placeholder="Input username" required oninput="cekform()" 
+                />
+              </li>
+              <li>
+                <select name="country" id="country" name="country" required oninput="cekform()">
+                  <option disabled value="" selected>Select Country</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="England">England</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Italy">Italy</option>
+                </select>
+              </li>
+              <li>
+                <select
+                  name="country_opponent"
+                  id="country_opponent"
+                  name="country_opponent" required oninput="cekform()"
+                >
+                  <option disabled value="" selected>Select Opponent Country</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="England">England</option>
+                  <option value="Spain">Spain</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Netherlands">Netherlands</option>
+                  <option value="Portugal">Portugal</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Italy">Italy</option>
+                </select>
+              </li>
+              <li>
+                <select name="level" id="level" name="level" required oninput="cekform()">
+                  <option value="" disabled selected>Select Level</option>
+                  <option value="Easy">Easy</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Hard">Hard</option>
+                </select>
+              </li>
+              <div class="btn">
+                <a href="" id="playButton" class="btn-play"
+                  ><button type="submit" disabled>Play Game</button></a
+                >
+                <a href="#" class="btn-inst" id="instructionButton"
+                  ><button>Instruction</button></a
+                >
+              </div>
+            </ul>
+          </form>
+
+          
+      </div>
+      <div class="bagian_kedua" id="bagian_kedua">
+        <img src="Sprites/Ball 02.png" alt="" />
+        <h1>WORLD HEAD FOOTBALL</h1>
+      </div>
+    </section>
+
+    <div class="canvas-container" style="display: none">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="scripts/InputHandler.js"></script>
+    <script src="scripts/react.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const instructionButton = document.getElementById("instructionButton");
+        const bagianKedua = document.getElementById("bagian_kedua");
+
+        instructionButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          // Ganti gambar dan teks pada bagian kedua
+          bagianKedua.innerHTML =
+            "<div class='inst'>" +
+            "<div class='inst_title'>" +
+            "  <h2>How to play the game</h2>" +
+            "<a href=''>X</a>" +
+            "</div>" +
+            "  <ul>" +
+            "    <li>1. Input Username</li>" +
+            "    <li>2. Move character to bounce ball</li>" +
+            "    <li>3. Get high score and win</li>" +
+            "    <li>4. Enjoy!</li>" +
+            "  </ul>" +
+            "<div class='player_control'>" +
+            "<div class='player1'>" +
+            "  <h4>Player 1 Control</h4>" +
+            "  <ul>" +
+            "    <li>1. W Key to Jump </li>" +
+            "    <li>2. A Key to Move Backward </li>" +
+            "    <li>3. D Key to Move Foward </li>" +
+            "    <li>4. Space Key to Kick </li>" +
+            "  </ul>" +
+            "</div>" +
+            "<div class='player2'>" +
+            "  <h4>Player 2 Control</h4>" +
+            "  <ul>" +
+            "    <li>1. Up Arrow Key to Jump </li>" +
+            "    <li>2. Right Arrow Key to Move Backward </li>" +
+            "    <li>3. Left Arrow Key to Move Foward </li>" +
+            "    <li>4. Down Arrow Key to Kick </li>" +
+            "  </ul>" +
+            "</div>"+
+            "</div>";
+        });
+      });
+    </script>
+
+    
+  </body>
+</html>

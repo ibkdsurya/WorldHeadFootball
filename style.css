@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+    font-family: sans-serif;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+    padding: 40px;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    background-color: #21529a;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.bagian_utama{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 45px;
+}
+.bagian_utama .title{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+.bagian_utama .title img{
+    width: 75px;
+}
+
+.bagian_utama form{
+    margin-top: 10px;
+    width: 95%;
+}
+.bagian_utama form ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bagian_utama form ul li select{
+    font-size: 15px;
+    background-color: #00255b;
+    padding: 15px;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.bagian_utama form ul li input{
+    font-size: 15px;
+    background-color: #00255b;
+    padding: 15px;
+    width: 90%;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+.inst{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.inst_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inst_title a{
+    padding: 5px 10px;
+    background-color: red;
+    border-radius: 3px;
+    border: 2px solid white;
+}
+.inst h2{
+    font-weight: 800;
+}
+.inst ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bagian_kedua img{
+    padding-left: 100px;
+
+}
+.bagian_kedua{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #00255b;
+    border-radius: 3px;
+    gap: 20px;
+}
+.bagian_kedua h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.bagian_kedua img{
+    width: 20%;
+    height: 20%;
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.btn .btn-play, .btn-inst{
+    width: 50%;
+}
+.btn .btn-play button, .btn-inst button{
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: larger;
+    border: none;
+}
+.btn-play button{
+    background-color: #e200fd;
+}
+.btn-play button:disabled{
+    cursor: not-allowed;
+    background-color: #4e4e4e;
+}
+.btn-inst button{
+    background-color: #fff600;
+    color: #00255b;
+
+}
+
+/* style gameover */
+.game_over{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background: #21529a;
+}
+.game_over h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.flag_score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+.flag_score h1{
+    font-size: 5rem;
+    margin-bottom: 50px;
+
+}
+
+.flag, .flag_opponent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.game_over .btn{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.game_over a{
+    background-color: #00255b;
+    padding: 15px 20px;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: larger;
+    cursor: pointer;
+}
+.game_over a:hover{
+    background-color: #00173a;
+}
+
+.paused-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+.paused-popup p{
+    font-size: 30px;
+    text-align: center;
+}
+.game_over button{
+    background-color: #00255b;
+    padding: 15px 35px;
+    border-radius: 3px;
+    font-weight: 900;
+    font-size: larger;
+    cursor: pointer;
+    border: none;
+}
+.game_over button:hover{
+    background-color: #00173a;
+}
+
+/* instruction style */
+.player_control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.player1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.player2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

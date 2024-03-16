@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Score</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/react.js"></script>
+  </head>
+  <body>
+    <section class="game_over">
+      <h1>Final Score</h1>
+      <h1 id="nama"></h1>
+      <h3 id="finalLevel" style="display: none;"></h3>
+      <div class="flag_score">
+        <div class="flag">
+          <img id="countryFlag" />
+          <h2 id="country"></h2>
+        </div>
+        <h1 id="finalScore"></h1>
+        <div class="flag_opponent">
+          <img id="opponentCountryFlag" />
+          <h2 id="countryOpponent"></h2>
+        </div>
+      </div>
+
+      <script>
+        function parseGameOverData() {
+          const urlParams = new URLSearchParams(window.location.search);
+
+          const nama = urlParams.get("finalNama");
+          const finalLevel = urlParams.get("finalLevel");
+          const finalScore = urlParams.get("finalScore");
+          const country = urlParams.get("country");
+          const countryOpponent = urlParams.get("countryOpponent");
+          const countryFlag = urlParams.get("Flag");
+          const opponentCountryFlag = urlParams.get("opponentFlag");
+
+          document.getElementById("nama").innerText = nama;
+          document.getElementById("finalLevel").innerText = finalLevel;
+          document.getElementById("finalScore").innerText = finalScore;
+          document.getElementById("country").innerText = country;
+          document.getElementById("countryOpponent").innerText =
+            countryOpponent;
+          document.getElementById(
+            "countryFlag"
+          ).src = `./Sprites/Flag/${countryFlag}`;
+          document.getElementById(
+            "opponentCountryFlag"
+          ).src = `./Sprites/Flag/${opponentCountryFlag}`;
+        }
+
+        window.onload = function () {
+          parseGameOverData();
+        };
+      </script>
+      <div class="btn">
+        <a href="index.html">Main Menu</a>
+        <button onmousedown="restart()">Restart</button>
+      </div>
+    </script>
+    </section>
+  </body>
+</html>
